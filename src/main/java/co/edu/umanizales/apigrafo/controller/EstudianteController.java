@@ -28,6 +28,7 @@ public class EstudianteController {
     }
 
     @PostMapping
+    @CrossOrigin (origins = "*", methods = {RequestMethod.POST})
     public List<Estudiante> adicionarEstudiante(@RequestBody Estudiante estu){
         return estudiantService.adicionarEstudiante(estu);
     }
